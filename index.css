@@ -1,0 +1,360 @@
+* {
+  box-sizing: border-box;
+  font-family: "Nanum Pen Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+
+  html {
+    font-size: 10px;
+  }
+  body {
+    margin: 0;
+  }
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+#container {
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.8rem;
+  font-weight: 600;
+  padding: 1rem 10rem;
+  position: sticky;
+  top: 0px;
+  background-color: #faebd7;
+  z-index: 1000;
+  .title {
+    cursor: pointer;
+  }
+  .hamberger {
+    display: none;
+  }
+
+  ul {
+    display: flex;
+    li {
+      margin-right: 1rem;
+      cursor: pointer;
+    }
+    li:hover {
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+  }
+}
+
+.info {
+  margin: 5rem 10rem;
+  position: relative;
+  .emoticon {
+    position: absolute;
+    left: -30px;
+    top: 45px;
+    font-size: 1.4rem;
+  }
+  p {
+    font-size: 2rem;
+  }
+}
+
+.timeline {
+  margin: 0 10rem;
+  .item {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 4rem;
+    .img_box {
+      img {
+        width: 200px;
+        height: 150px;
+      }
+    }
+    ul {
+      margin-left: 50px;
+      width: 400px;
+      font-size: 1.4rem;
+    }
+  }
+}
+
+.skill_stack {
+  margin: 0 10rem;
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    li {
+      display: flex;
+      align-items: center;
+      width: 50%;
+      margin-bottom: 4rem;
+      padding-right: 5rem;
+      img {
+        width: 60px;
+        height: 60px;
+        margin-right: 1rem;
+      }
+      .content {
+        p {
+          margin: 0;
+        }
+        .skillfulness {
+          background-color: gray;
+          height: 8px;
+          width: 380px;
+          border-radius: 4px;
+          margin: 0.5rem 0;
+          .degree {
+            height: 8px;
+            background-color: blue;
+            border-radius: 4px;
+          }
+        }
+        font-size: 1.4rem;
+      }
+    }
+  }
+}
+
+.portfolio {
+  margin: 0 10rem;
+  .item_container {
+    .item {
+      display: flex;
+      img {
+        width: 800px;
+        height: 500px;
+      }
+      p {
+        font-size: 1.4rem;
+        margin-left: 1.2rem;
+      }
+    }
+    .divider {
+      width: 100%;
+      height: 5px;
+      margin: 2rem 0;
+      background-color: #fff;
+      border: 0;
+      background-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 0),
+        rgba(0, 0, 0, 0.75),
+        rgba(0, 0, 0, 0)
+      );
+    }
+  }
+}
+
+.contact {
+  margin: 0 10rem;
+  .contact_container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    .item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 50%;
+      margin-bottom: 3rem;
+      img {
+        width: 150px;
+        height: 150px;
+      }
+      .content {
+        h2 {
+          font-size: 2rem;
+        }
+        span {
+          font-size: 1.4rem;
+        }
+        a {
+          font-size: 1.4rem;
+        }
+      }
+    }
+    .item.phone {
+      img {
+        margin-right: 1rem;
+      }
+    }
+    .item.kakao {
+      img {
+        margin-right: 1rem;
+      }
+    }
+    .item.git {
+      padding-left: 6rem;
+    }
+  }
+}
+
+@media (max-width: 1250px) and (min-width: 820px) {
+  .timeline {
+    margin: 0;
+    h1 {
+      text-align: center;
+    }
+  }
+  .skill_stack {
+    margin: 0;
+    h1 {
+      text-align: center;
+    }
+    ul {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      li {
+        img {
+          margin-right: 0;
+        }
+        width: 100%;
+        text-align: center;
+        padding-right: 0;
+        display: flex;
+        flex-direction: column;
+        .content {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+    }
+  }
+  .portfolio {
+    margin: 0;
+    h1 {
+      text-align: center;
+    }
+    .item_container {
+      .item {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+  .contact {
+    margin: 0;
+    h1 {
+      text-align: center;
+    }
+  }
+}
+
+@media (max-width: 810px) {
+  html {
+    position: relative;
+  }
+  .header {
+    padding: 1rem 2rem;
+    flex-wrap: wrap;
+    ul {
+      display: none;
+    }
+    .show_cate_list {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      li {
+        margin-bottom: 1rem;
+      }
+    }
+    .hamberger {
+      display: block;
+      cursor: pointer;
+    }
+  }
+  .info {
+    margin: 0;
+  }
+  .timeline {
+    margin: 0;
+    h1 {
+      text-align: center;
+    }
+    .item_container {
+      .item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+    }
+  }
+  .skill_stack {
+    margin: 0;
+    h1 {
+      text-align: center;
+    }
+    ul {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      li {
+        img {
+          margin-right: 0;
+        }
+        width: 100%;
+        text-align: center;
+        padding-right: 0;
+        display: flex;
+        flex-direction: column;
+        .content {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+    }
+  }
+  .portfolio {
+    margin: 0;
+    h1 {
+      text-align: center;
+    }
+    .item_container {
+      .item {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        img {
+          width: 600px;
+        }
+      }
+    }
+  }
+  .contact {
+    margin: 0;
+    h1 {
+      text-align: center;
+    }
+    .contact_container {
+      flex-wrap: nowrap;
+      flex-direction: column;
+      .item {
+        flex-direction: column;
+        .content {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+      .item.git {
+        padding-left: 0;
+      }
+    }
+  }
+}
