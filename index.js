@@ -7,34 +7,34 @@ const contactBtn = document.querySelector(".header ul .t-contact");
 const hambergerBtn = document.querySelector(".header .hamberger");
 const ul = document.querySelector(".header ul");
 const li = document.querySelectorAll(".header ul li");
+const info = document.querySelector(".info");
+const timeline = document.querySelector(".timeline");
+const skill_stack = document.querySelector(".skill_stack");
+const portfolio = document.querySelector(".portfolio");
+const contact = document.querySelector(".contact");
+const responsiveDesign = window.matchMedia("(max-width:960px)");
 
-window.addEventListener("scroll", () => {
-  console.log(window);
-});
+function scrollToTag(tagBtn, tag) {
+  tagBtn.addEventListener("click", () => {
+    let headerWidth = 68;
+    if (responsiveDesign.matches) {
+      headerWidth = 328;
+    }
+    const scroll =
+      tag.getBoundingClientRect().top - headerWidth + window.scrollY;
+    window.scrollTo({ top: scroll, behavior: "smooth" });
+  });
+}
 
 headerLogo.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
-introBtn.addEventListener("click", () => {
-  window.scrollTo({ top: 73, behavior: "smooth" });
-});
-
-timelineBtn.addEventListener("click", () => {
-  window.scrollTo({ top: 652, behavior: "smooth" });
-});
-
-skill_stackBtn.addEventListener("click", () => {
-  window.scrollTo({ top: 1168, behavior: "smooth" });
-});
-
-portfolioBtn.addEventListener("click", () => {
-  window.scrollTo({ top: 2065, behavior: "smooth" });
-});
-
-contactBtn.addEventListener("click", () => {
-  window.scrollTo({ top: 4764, behavior: "smooth" });
-});
+scrollToTag(introBtn, info);
+scrollToTag(timelineBtn, timeline);
+scrollToTag(skill_stackBtn, skill_stack);
+scrollToTag(portfolioBtn, portfolio);
+scrollToTag(contactBtn, contact);
 
 hambergerBtn.addEventListener("click", (e) => {
   if (ul.classList.contains("show_cate_list")) {

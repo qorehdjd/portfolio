@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  font-family: "Nanum Pen Script", cursive;
+  font-family: "Stylish", serif;
   font-weight: 400;
   font-style: normal;
 
@@ -15,9 +15,6 @@
     margin: 0;
     padding: 0;
   }
-}
-
-#container {
 }
 
 .header {
@@ -60,8 +57,32 @@
     top: 45px;
     font-size: 1.4rem;
   }
-  p {
-    font-size: 2rem;
+  .question {
+    display: flex;
+
+    ul {
+      width: 50%;
+      margin-right: 2rem;
+      h2 {
+        color: #ff0000;
+      }
+      span {
+        display: inline-block;
+        font-size: 1.4rem;
+        margin-bottom: 0.4rem;
+      }
+      li {
+        font-size: 1.2rem;
+        margin-bottom: 1rem;
+      }
+    }
+    .right_question_box {
+      width: 50%;
+      font-size: 1.2rem;
+      h2 {
+        color: #ff0000;
+      }
+    }
   }
 }
 
@@ -102,20 +123,11 @@
         margin-right: 1rem;
       }
       .content {
+        .title {
+          margin-bottom: 0.3rem;
+        }
         p {
           margin: 0;
-        }
-        .skillfulness {
-          background-color: gray;
-          height: 8px;
-          width: 380px;
-          border-radius: 4px;
-          margin: 0.5rem 0;
-          .degree {
-            height: 8px;
-            background-color: blue;
-            border-radius: 4px;
-          }
         }
         font-size: 1.4rem;
       }
@@ -198,7 +210,9 @@
   }
 }
 
-@media (max-width: 1250px) and (min-width: 820px) {
+/* --------------------------media--------------------------------- */
+
+@media (max-width: 1250px) and (min-width: 960px) {
   .timeline {
     margin: 0;
     h1 {
@@ -233,6 +247,7 @@
   }
   .portfolio {
     margin: 0;
+    text-align: center;
     h1 {
       text-align: center;
     }
@@ -252,7 +267,7 @@
   }
 }
 
-@media (max-width: 810px) {
+@media (max-width: 960px) {
   html {
     position: relative;
   }
@@ -320,6 +335,7 @@
     }
   }
   .portfolio {
+    text-align: center;
     margin: 0;
     h1 {
       text-align: center;
